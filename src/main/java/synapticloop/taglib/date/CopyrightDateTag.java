@@ -25,10 +25,12 @@ import javax.servlet.jsp.tagext.BodyTagSupport;
 
 public class CopyrightDateTag extends BodyTagSupport {
 	private static final long serialVersionUID = 4530945952130590812L;
+
+	private static final String DEFAULT_SEPARATOR = " - ";
 	private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy");
 
 	private String startDate = null;
-	private String separator = " - ";
+	private String separator = DEFAULT_SEPARATOR;
 
 	@Override
 	public int doEndTag() throws JspException {
@@ -65,6 +67,13 @@ public class CopyrightDateTag extends BodyTagSupport {
 
 	public void setSeparator(String separator) {
 		this.separator = separator;
+	}
+
+	@Override
+	public void release() {
+		super.release();
+		this.startDate = null;
+		this.separator = DEFAULT_SEPARATOR;
 	}
 
 }
