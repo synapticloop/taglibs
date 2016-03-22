@@ -16,7 +16,7 @@ Tag libraries for various things
 Include the tag library
 
 ```
-tbd
+<%@ taglib uri="http://synapticloop.com/taglibs"  prefix="sutl" %>
 ```
 
 ## CopyrightDateTag
