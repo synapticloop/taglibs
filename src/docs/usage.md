@@ -12,6 +12,20 @@ Include the tag library
 
 ## CopyrightDateTag
 
+To use the tag, just enter the start date (the separator attribute is optional)
+
 ```
-<sutl:copyrightDate startDate="2016" separator=" - " />
+Copyright (c) <sutl:copyrightDate startDate="2015" separator=" - " /> My Company. All rights reserved.
+```
+
+This will output
+
+```
+Copyright (c) 2015 - 2016 My Company. All rights reserved.
+```
+
+If the start date is empty or the current year, then only the current year is output, e.g.:
+
+```
+Copyright (c) 2016 My Company. All rights reserved.
 ```
