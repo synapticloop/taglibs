@@ -81,7 +81,7 @@ As such, this is not a repository, but a location to download files from.
 
 This project publishes artefacts to [Maven Central](https://search.maven.org/)
 
-> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.0|jar)
+> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.1|jar)
 
 ## maven setup
 
@@ -101,9 +101,9 @@ repositories {
 
 ```
 dependencies {
-	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.0', ext: 'jar')
+	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.1', ext: 'jar')
 
-	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.0', ext: 'jar')
+	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.1', ext: 'jar')
 }
 ```
 
@@ -111,9 +111,9 @@ or, more simply for versions of gradle greater than 2.1
 
 ```
 dependencies {
-	runtime 'synapticloop:taglibs:1.0.0'
+	runtime 'synapticloop:taglibs:1.0.1'
 
-	compile 'synapticloop:taglibs:1.0.0'
+	compile 'synapticloop:taglibs:1.0.1'
 }
 ```
 
@@ -123,7 +123,7 @@ dependencies {
 <dependency>
 	<groupId>synapticloop</groupId>
 	<artifactId>taglibs</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<type>jar</type>
 </dependency>
 ```
