@@ -81,7 +81,7 @@ As such, this is not a repository, but a location to download files from.
 
 This project publishes artefacts to [Maven Central](https://search.maven.org/)
 
-> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.2|jar)
+> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.3|jar)
 
 ## maven setup
 
@@ -101,9 +101,9 @@ repositories {
 
 ```
 dependencies {
-	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.2', ext: 'jar')
+	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.3', ext: 'jar')
 
-	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.2', ext: 'jar')
+	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.3', ext: 'jar')
 }
 ```
 
@@ -111,9 +111,9 @@ or, more simply for versions of gradle greater than 2.1
 
 ```
 dependencies {
-	runtime 'synapticloop:taglibs:1.0.2'
+	runtime 'synapticloop:taglibs:1.0.3'
 
-	compile 'synapticloop:taglibs:1.0.2'
+	compile 'synapticloop:taglibs:1.0.3'
 }
 ```
 
@@ -123,7 +123,7 @@ dependencies {
 <dependency>
 	<groupId>synapticloop</groupId>
 	<artifactId>taglibs</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<type>jar</type>
 </dependency>
 ```
@@ -148,11 +148,20 @@ You will also need to download the following dependencies:
 ### testCompile dependencies
 
   - junit:junit:4.12: (It may be available on one of: [bintray](https://bintray.com/junit/maven/junit/4.12/view#files/junit/junit/4.12) [mvn central](http://search.maven.org/#artifactdetails|junit|junit|4.12|jar))
+  - org.mockito:mockito-core:1.10.19: (It may be available on one of: [bintray](https://bintray.com/org.mockito/maven/mockito-core/1.10.19/view#files/org.mockito/mockito-core/1.10.19) [mvn central](http://search.maven.org/#artifactdetails|org.mockito|mockito-core|1.10.19|jar))
+  - javax.servlet.jsp:jsp-api:2.2: (It may be available on one of: [bintray](https://bintray.com/javax.servlet.jsp/maven/jsp-api/2.2/view#files/javax.servlet.jsp/jsp-api/2.2) [mvn central](http://search.maven.org/#artifactdetails|javax.servlet.jsp|jsp-api|2.2|jar))
+  - javax.servlet:javax.servlet-api:3.1.0: (It may be available on one of: [bintray](https://bintray.com/javax.servlet/maven/javax.servlet-api/3.1.0/view#files/javax.servlet/javax.servlet-api/3.1.0) [mvn central](http://search.maven.org/#artifactdetails|javax.servlet|javax.servlet-api|3.1.0|jar))
+  - javax.el:javax.el-api:3.0.0: (It may be available on one of: [bintray](https://bintray.com/javax.el/maven/javax.el-api/3.0.0/view#files/javax.el/javax.el-api/3.0.0) [mvn central](http://search.maven.org/#artifactdetails|javax.el|javax.el-api|3.0.0|jar))
+  - org.slf4j:slf4j-api:1.7.19: (It may be available on one of: [bintray](https://bintray.com/org.slf4j/maven/slf4j-api/1.7.19/view#files/org.slf4j/slf4j-api/1.7.19) [mvn central](http://search.maven.org/#artifactdetails|org.slf4j|slf4j-api|1.7.19|jar))
 
 
 ### testRuntime dependencies
 
   - junit:junit:4.12: (It may be available on one of: [bintray](https://bintray.com/junit/maven/junit/4.12/view#files/junit/junit/4.12) [mvn central](http://search.maven.org/#artifactdetails|junit|junit|4.12|jar))
+  - org.mockito:mockito-core:1.10.19: (It may be available on one of: [bintray](https://bintray.com/org.mockito/maven/mockito-core/1.10.19/view#files/org.mockito/mockito-core/1.10.19) [mvn central](http://search.maven.org/#artifactdetails|org.mockito|mockito-core|1.10.19|jar))
+  - javax.servlet.jsp:jsp-api:2.2: (It may be available on one of: [bintray](https://bintray.com/javax.servlet.jsp/maven/jsp-api/2.2/view#files/javax.servlet.jsp/jsp-api/2.2) [mvn central](http://search.maven.org/#artifactdetails|javax.servlet.jsp|jsp-api|2.2|jar))
+  - javax.servlet:javax.servlet-api:3.1.0: (It may be available on one of: [bintray](https://bintray.com/javax.servlet/maven/javax.servlet-api/3.1.0/view#files/javax.servlet/javax.servlet-api/3.1.0) [mvn central](http://search.maven.org/#artifactdetails|javax.servlet|javax.servlet-api|3.1.0|jar))
+  - javax.el:javax.el-api:3.0.0: (It may be available on one of: [bintray](https://bintray.com/javax.el/maven/javax.el-api/3.0.0/view#files/javax.el/javax.el-api/3.0.0) [mvn central](http://search.maven.org/#artifactdetails|javax.el|javax.el-api|3.0.0|jar))
 
 **NOTE:** You may need to download any dependencies of the above dependencies in turn (i.e. the transitive dependencies)
 
