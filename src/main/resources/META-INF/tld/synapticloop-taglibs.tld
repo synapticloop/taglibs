@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+ 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+		version="2.0">
+
+	<description>
+		Utility tag libraries
+	</description>
+	<display-name>Synapticloop Utility Tag Library</display-name>
+	<tlib-version>1.2</tlib-version>
+	<short-name>sutl</short-name>
+
+	<tag>
+		<description>
+			Print out a copyright date in the format {startYear}{separator}{currentYear}
+
+			If the start year is null, print out the current year.
+
+			If the start year is not null, then there are two possibilities:
+			
+			  1. The current year is the same as the start year, in this case, only 
+			     the start year is output (e.g. 2016)
+			  2. The current year is greater than the start year, in this case, the
+			     start year, followed by the separator (default ' - ') followed by 
+			     the current year. (e.g. 2015 - 2016)
+		</description>
+		<name>PlanFindByPrimaryKey</name>
+		<tag-class>synapticloop.taglib.date.CopyrightDateTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The start date, if null, the current date will be output
+			</description>
+			<name>startDate</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The separator to use between the dates (defaults to ' - ')
+			</description>
+			<name>separator</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+</taglib>
