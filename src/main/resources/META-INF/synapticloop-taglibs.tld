@@ -49,4 +49,29 @@
 			<type>java.lang.String</type>
 		</attribute>
 	</tag>
+
+	<function>
+		<description>
+			URL encode a string, if there was an error with the encoding, return
+			the un-encoded string
+		</description>
+		<name>urlEncode</name>
+		<function-class>synapticloop.function.net.NetFunctions</function-class>
+		<function-signature>
+			String urlEncode(String)
+		</function-signature>
+	</function> 
+
+	<function>
+		<description>
+			URL decode a string, if there was an error with the encoding, return
+			the un-decoded string
+		</description>
+		<name>urlDecode</name>
+		<function-class>synapticloop.function.net.NetFunctions</function-class>
+		<function-signature>
+			String urlDecode(String)
+		</function-signature>
+	</function> 
+
 </taglib>
