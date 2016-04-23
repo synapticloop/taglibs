@@ -50,6 +50,11 @@
 		</attribute>
 	</tag>
 
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	  FUNCTIONS
+
+	   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<function>
 		<description>
 			URL encode a string, if there was an error with the encoding, return

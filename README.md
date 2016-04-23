@@ -39,6 +39,34 @@ If the start date is empty or the current year, then only the current year is ou
 Copyright (c) 2016 My Company. All rights reserved.
 ```
 
+# Functions
+
+Functions for various things
+
+## urlEncode
+
+```
+${sutl:urlEncode("some url")
+```
+
+which will output
+
+```
+some+url
+```
+
+## urlDecode
+
+```
+${sutl:urlDecode("some+url")
+```
+
+which will output
+
+```
+some url
+```
+
 
 # Building the Package
 
@@ -95,7 +123,7 @@ As such, this is not a repository, but a location to download files from.
 
 This project publishes artefacts to [Maven Central](https://search.maven.org/)
 
-> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.3|jar)
+> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.4|jar)
 
 ## maven setup
 
@@ -115,9 +143,9 @@ repositories {
 
 ```
 dependencies {
-	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.3', ext: 'jar')
+	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.4', ext: 'jar')
 
-	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.3', ext: 'jar')
+	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.4', ext: 'jar')
 }
 ```
 
@@ -125,9 +153,9 @@ or, more simply for versions of gradle greater than 2.1
 
 ```
 dependencies {
-	runtime 'synapticloop:taglibs:1.0.3'
+	runtime 'synapticloop:taglibs:1.0.4'
 
-	compile 'synapticloop:taglibs:1.0.3'
+	compile 'synapticloop:taglibs:1.0.4'
 }
 ```
 
@@ -137,7 +165,7 @@ dependencies {
 <dependency>
 	<groupId>synapticloop</groupId>
 	<artifactId>taglibs</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<type>jar</type>
 </dependency>
 ```
