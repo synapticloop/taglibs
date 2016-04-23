@@ -70,7 +70,7 @@
 		<name>urlDecode</name>
 		<function-class>synapticloop.function.net.NetFunctions</function-class>
 		<function-signature>
-			String urlDecode(String)
+			java.lang.String urlDecode(java.lang.String)
 		</function-signature>
 	</function> 
 
