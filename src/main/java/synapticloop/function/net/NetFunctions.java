@@ -1,9 +1,5 @@
 package synapticloop.function.net;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-
 /*
  * Copyright (c) 2016 Synapticloop.
  * 
@@ -20,7 +16,20 @@ import java.net.URLEncoder;
  * this source code or binaries.
  */
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
 public class NetFunctions {
+
+	/**
+	 * URL encode a string with UTF-8 character encoding, if the encoding cannot
+	 * be found, return the original String.
+	 * 
+	 * @param string the string to encode
+	 * 
+	 * @return the URL encoded string, or the original string if the encoding is not supported
+	 */
 	public static String urlEncode(String string) {
 		try {
 			return(URLEncoder.encode(string, "UTF-8"));
@@ -29,6 +38,14 @@ public class NetFunctions {
 		}
 	}
 
+	/**
+	 * URL deodec a string with UTF-8 character encoding, if the encoding cannot
+	 * be found, return the original String.
+	 * 
+	 * @param string the string to decode
+	 * 
+	 * @return the URL decoded string, or the original string if the encoding is not supported
+	 */
 	public static String urlDecode(String string) {
 		try {
 			return(URLDecoder.decode(string, "UTF-8"));

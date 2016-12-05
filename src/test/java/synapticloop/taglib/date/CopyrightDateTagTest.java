@@ -61,7 +61,7 @@ public class CopyrightDateTagTest {
 
 	@Test
 	public void testStartCurrentSame() throws JspException, IOException {
-		copyrightDateTag.setStartDate(currentYear);
+		copyrightDateTag.setStartYear(currentYear);
 		copyrightDateTag.doEndTag();
 		// now test the buffer
 		assertEquals(currentYear, testJspWriter.getContent());
@@ -69,7 +69,7 @@ public class CopyrightDateTagTest {
 
 	@Test
 	public void testStartCurrentDifferent() throws JspException, IOException {
-		copyrightDateTag.setStartDate("2015");
+		copyrightDateTag.setStartYear("2015");
 		copyrightDateTag.doEndTag();
 		// now test the buffer
 		assertEquals("2015" + " - " + currentYear, testJspWriter.getContent());
@@ -77,7 +77,7 @@ public class CopyrightDateTagTest {
 
 	@Test
 	public void testStartCurrentDifferentSeparator() throws JspException, IOException {
-		copyrightDateTag.setStartDate("2015");
+		copyrightDateTag.setStartYear("2015");
 		copyrightDateTag.setSeparator(" all the way up to ");
 		copyrightDateTag.doEndTag();
 		// now test the buffer
@@ -86,12 +86,12 @@ public class CopyrightDateTagTest {
 
 	@Test
 	public void testRelease() throws JspException, IOException {
-		copyrightDateTag.setStartDate("2015");
-		assertEquals("2015", copyrightDateTag.getStartDate());
+		copyrightDateTag.setStartYear("2015");
+		assertEquals("2015", copyrightDateTag.getStartYear());
 		copyrightDateTag.setSeparator(" all the way up to ");
 		assertEquals(" all the way up to ", copyrightDateTag.getSeparator());
 		copyrightDateTag.release();
-		assertEquals(null, copyrightDateTag.getStartDate());
+		assertEquals(null, copyrightDateTag.getStartYear());
 		assertEquals(" - ", copyrightDateTag.getSeparator());
 	}
 

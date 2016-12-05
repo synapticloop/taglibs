@@ -15,7 +15,7 @@ Include the tag library
 To use the tag, just enter the start date (the separator attribute is optional)
 
 ```
-Copyright (c) <sutl:copyrightDate startDate="2015" separator=" - " /> My Company. All rights reserved.
+Copyright (c) <sutl:copyrightDate startYear="2015" separator=" - " /> My Company. All rights reserved.
 ```
 
 This will output

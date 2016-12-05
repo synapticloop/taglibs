@@ -34,7 +34,7 @@
 			<description>
 				The start date, if null, the current date will be output
 			</description>
-			<name>startDate</name>
+			<name>startYear</name>
 			<required>false</required>
 			<rtexprvalue>false</rtexprvalue>
 			<type>java.lang.String</type>

@@ -1,83 +1,184 @@
-[![Build Status](https://travis-ci.org/synapticloop/taglibs.svg?branch=master)](https://travis-ci.org/synapticloop/taglibs) [![Download](https://api.bintray.com/packages/synapticloop/maven/taglibs/images/download.svg)](https://bintray.com/synapticloop/maven/taglibs/_latestVersion) [![GitHub Release](https://img.shields.io/github/release/synapticloop/taglibs.svg)](https://github.com/synapticloop/taglibs/releases) 
+ <a name="#documentr_top"></a>[![Build Status](https://travis-ci.org/synapticloop/taglibs.svg?branch=master)](https://travis-ci.org/synapticloop/taglibs) [![Download](https://api.bintray.com/packages/synapticloop/maven/taglibs/images/download.svg)](https://bintray.com/synapticloop/maven/taglibs/_latestVersion) [![GitHub Release](https://img.shields.io/github/release/synapticloop/taglibs.svg)](https://github.com/synapticloop/taglibs/releases) 
 
-# taglibs
+
+
+<a name="documentr_heading_0"></a>
+
+# taglibs <sup><sup>[top](#documentr_top)</sup></sup>
 
 
 
 > Utility tag-libraries
 
 
+
+
+
+
+<a name="documentr_heading_1"></a>
+
+# Table of Contents <sup><sup>[top](#documentr_top)</sup></sup>
+
+
+
+ - [taglibs](#documentr_heading_0)
+ - [Table of Contents](#documentr_heading_1)
+   - [Setup](#documentr_heading_2)
+   - [CopyrightDateTag](#documentr_heading_3)
+ - [Functions](#documentr_heading_4)
+   - [urlEncode](#documentr_heading_5)
+   - [urlDecode](#documentr_heading_6)
+ - [Building the Package](#documentr_heading_7)
+   - [*NIX/Mac OS X](#documentr_heading_8)
+   - [Windows](#documentr_heading_9)
+ - [Running the Tests](#documentr_heading_10)
+   - [*NIX/Mac OS X](#documentr_heading_11)
+   - [Windows](#documentr_heading_12)
+ - [Artefact Publishing - Github](#documentr_heading_13)
+ - [Dependency Management Maven](#documentr_heading_14)
+   - [maven setup](#documentr_heading_15)
+   - [gradle setup](#documentr_heading_16)
+   - [Dependencies - Gradle](#documentr_heading_17)
+   - [Dependencies - Maven](#documentr_heading_18)
+   - [Dependencies - Downloads](#documentr_heading_19)
+ - [License](#documentr_heading_24)
+
+
 # Tag Libraries
 
 Tag libraries for various things
 
-## Setup
+
+
+<a name="documentr_heading_2"></a>
+
+## Setup <sup><sup>[top](#documentr_top)</sup></sup>
 
 Include the tag library
+
+
 
 ```
 <%@ taglib uri="http://synapticloop.com/taglibs"  prefix="sutl" %>
 ```
 
-## CopyrightDateTag
+
+
+
+
+<a name="documentr_heading_3"></a>
+
+## CopyrightDateTag <sup><sup>[top](#documentr_top)</sup></sup>
 
 To use the tag, just enter the start date (the separator attribute is optional)
 
+
+
 ```
-Copyright (c) <sutl:copyrightDate startDate="2015" separator=" - " /> My Company. All rights reserved.
+Copyright (c) <sutl:copyrightDate startYear="2015" separator=" - " /> My Company. All rights reserved.
 ```
 
+
+
 This will output
+
+
 
 ```
 Copyright (c) 2015 - 2016 My Company. All rights reserved.
 ```
 
+
+
 If the start date is empty or the current year, then only the current year is output, e.g.:
+
+
 
 ```
 Copyright (c) 2016 My Company. All rights reserved.
 ```
 
-# Functions
+
+
+
+
+<a name="documentr_heading_4"></a>
+
+# Functions <sup><sup>[top](#documentr_top)</sup></sup>
 
 Functions for various things
 
-## urlEncode
+
+
+<a name="documentr_heading_5"></a>
+
+## urlEncode <sup><sup>[top](#documentr_top)</sup></sup>
+
+
 
 ```
 ${sutl:urlEncode("some url")
 ```
 
+
+
 which will output
+
+
 
 ```
 some+url
 ```
 
-## urlDecode
+
+
+
+
+<a name="documentr_heading_6"></a>
+
+## urlDecode <sup><sup>[top](#documentr_top)</sup></sup>
+
+
 
 ```
 ${sutl:urlDecode("some+url")
 ```
 
+
+
 which will output
+
+
 
 ```
 some url
 ```
 
 
-# Building the Package
 
-## *NIX/Mac OS X
+
+
+
+<a name="documentr_heading_7"></a>
+
+# Building the Package <sup><sup>[top](#documentr_top)</sup></sup>
+
+
+
+<a name="documentr_heading_8"></a>
+
+## *NIX/Mac OS X <sup><sup>[top](#documentr_top)</sup></sup>
 
 From the root of the project, simply run
 
 `./gradlew build`
 
 
-## Windows
+
+
+<a name="documentr_heading_9"></a>
+
+## Windows <sup><sup>[top](#documentr_top)</sup></sup>
 
 `./gradlew.bat build`
 
@@ -86,9 +187,17 @@ This will compile and assemble the artefacts into the `build/libs/` directory.
 
 Note that this may also run tests (if applicable see the Testing notes)
 
-# Running the Tests
 
-## *NIX/Mac OS X
+
+<a name="documentr_heading_10"></a>
+
+# Running the Tests <sup><sup>[top](#documentr_top)</sup></sup>
+
+
+
+<a name="documentr_heading_11"></a>
+
+## *NIX/Mac OS X <sup><sup>[top](#documentr_top)</sup></sup>
 
 From the root of the project, simply run
 
@@ -98,7 +207,11 @@ if you do not have gradle installed, try:
 
 `gradlew --info test`
 
-## Windows
+
+
+<a name="documentr_heading_12"></a>
+
+## Windows <sup><sup>[top](#documentr_top)</sup></sup>
 
 From the root of the project, simply run
 
@@ -111,27 +224,45 @@ if you do not have gradle installed, try:
 
 The `--info` switch will also output logging for the tests
 
-# Artefact Publishing - Github
 
-This project publishes artefacts to [GitHib](https://github.com/)
+
+<a name="documentr_heading_13"></a>
+
+# Artefact Publishing - Github <sup><sup>[top](#documentr_top)</sup></sup>
+
+This project publishes artefacts to [GitHub](https://github.com/)
 
 > Note that the latest version can be found [https://github.com/synapticloop/taglibs/releases](https://github.com/synapticloop/taglibs/releases)
 
 As such, this is not a repository, but a location to download files from.
 
-# Dependency Management Maven
+
+
+<a name="documentr_heading_14"></a>
+
+# Dependency Management Maven <sup><sup>[top](#documentr_top)</sup></sup>
 
 This project publishes artefacts to [Maven Central](https://search.maven.org/)
 
-> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|1.0.4|jar)
+> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|2.0.0|jar)
 
-## maven setup
+
+
+<a name="documentr_heading_15"></a>
+
+## maven setup <sup><sup>[top](#documentr_top)</sup></sup>
 
 No setup is required
 
-## gradle setup
+
+
+<a name="documentr_heading_16"></a>
+
+## gradle setup <sup><sup>[top](#documentr_top)</sup></sup>
 
 Repository
+
+
 
 ```
 repositories {
@@ -139,38 +270,64 @@ repositories {
 }
 ```
 
-## Dependencies - Gradle
+
+
+
+
+<a name="documentr_heading_17"></a>
+
+## Dependencies - Gradle <sup><sup>[top](#documentr_top)</sup></sup>
+
+
 
 ```
 dependencies {
-	runtime(group: 'synapticloop', name: 'taglibs', version: '1.0.4', ext: 'jar')
+	runtime(group: 'synapticloop', name: 'taglibs', version: '2.0.0', ext: 'jar')
 
-	compile(group: 'synapticloop', name: 'taglibs', version: '1.0.4', ext: 'jar')
+	compile(group: 'synapticloop', name: 'taglibs', version: '2.0.0', ext: 'jar')
 }
 ```
+
+
 
 or, more simply for versions of gradle greater than 2.1
 
+
+
 ```
 dependencies {
-	runtime 'synapticloop:taglibs:1.0.4'
+	runtime 'synapticloop:taglibs:2.0.0'
 
-	compile 'synapticloop:taglibs:1.0.4'
+	compile 'synapticloop:taglibs:2.0.0'
 }
 ```
 
-## Dependencies - Maven
+
+
+
+
+<a name="documentr_heading_18"></a>
+
+## Dependencies - Maven <sup><sup>[top](#documentr_top)</sup></sup>
+
+
 
 ```
 <dependency>
 	<groupId>synapticloop</groupId>
 	<artifactId>taglibs</artifactId>
-	<version>1.0.4</version>
+	<version>2.0.0</version>
 	<type>jar</type>
 </dependency>
 ```
 
-## Dependencies - Downloads
+
+
+
+
+<a name="documentr_heading_19"></a>
+
+## Dependencies - Downloads <sup><sup>[top](#documentr_top)</sup></sup>
 
 
 You will also need to download the following dependencies:
@@ -207,7 +364,13 @@ You will also need to download the following dependencies:
 
 **NOTE:** You may need to download any dependencies of the above dependencies in turn (i.e. the transitive dependencies)
 
-# License
+
+
+<a name="documentr_heading_24"></a>
+
+# License <sup><sup>[top](#documentr_top)</sup></sup>
+
+
 
 ```
 The MIT License (MIT)
@@ -234,9 +397,10 @@ SOFTWARE.
 ```
 
 
+
+
 --
 
 > `This README.md file was hand-crafted with care utilising synapticloop`[`templar`](https://github.com/synapticloop/templar/)`->`[`documentr`](https://github.com/synapticloop/documentr/)
 
 --
-
