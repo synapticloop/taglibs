@@ -50,6 +50,33 @@
 		</attribute>
 	</tag>
 
+	<tag>
+		<description>
+			Print out a random word from the list of passed in words, with an optional
+			delimiter (which defaults to a comma ',')
+		</description>
+		<name>randomWord</name>
+		<tag-class>synapticloop.taglib.text.RandomWordTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The list of (delimiter separated) words to use
+			</description>
+			<name>words</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The delimiter to split the words on (default ",")
+			</description>
+			<name>delimeter</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	  FUNCTIONS

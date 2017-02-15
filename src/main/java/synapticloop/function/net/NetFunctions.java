@@ -39,7 +39,7 @@ public class NetFunctions {
 	}
 
 	/**
-	 * URL deodec a string with UTF-8 character encoding, if the encoding cannot
+	 * URL decode a string with UTF-8 character encoding, if the encoding cannot
 	 * be found, return the original String.
 	 * 
 	 * @param string the string to decode

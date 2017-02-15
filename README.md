@@ -25,23 +25,24 @@
  - [Table of Contents](#documentr_heading_1)
    - [Setup](#documentr_heading_2)
    - [CopyrightDateTag](#documentr_heading_3)
- - [Functions](#documentr_heading_4)
-   - [urlEncode](#documentr_heading_5)
-   - [urlDecode](#documentr_heading_6)
- - [Building the Package](#documentr_heading_7)
-   - [*NIX/Mac OS X](#documentr_heading_8)
-   - [Windows](#documentr_heading_9)
- - [Running the Tests](#documentr_heading_10)
-   - [*NIX/Mac OS X](#documentr_heading_11)
-   - [Windows](#documentr_heading_12)
- - [Artefact Publishing - Github](#documentr_heading_13)
- - [Dependency Management Maven](#documentr_heading_14)
-   - [maven setup](#documentr_heading_15)
-   - [gradle setup](#documentr_heading_16)
-   - [Dependencies - Gradle](#documentr_heading_17)
-   - [Dependencies - Maven](#documentr_heading_18)
-   - [Dependencies - Downloads](#documentr_heading_19)
- - [License](#documentr_heading_24)
+   - [RandomWordTag](#documentr_heading_4)
+ - [Functions](#documentr_heading_5)
+   - [urlEncode](#documentr_heading_6)
+   - [urlDecode](#documentr_heading_7)
+ - [Building the Package](#documentr_heading_8)
+   - [*NIX/Mac OS X](#documentr_heading_9)
+   - [Windows](#documentr_heading_10)
+ - [Running the Tests](#documentr_heading_11)
+   - [*NIX/Mac OS X](#documentr_heading_12)
+   - [Windows](#documentr_heading_13)
+ - [Artefact Publishing - Github](#documentr_heading_14)
+ - [Dependency Management Maven](#documentr_heading_15)
+   - [maven setup](#documentr_heading_16)
+   - [gradle setup](#documentr_heading_17)
+   - [Dependencies - Gradle](#documentr_heading_18)
+   - [Dependencies - Maven](#documentr_heading_19)
+   - [Dependencies - Downloads](#documentr_heading_20)
+ - [License](#documentr_heading_25)
 
 
 # Tag Libraries
@@ -104,13 +105,52 @@ Copyright (c) 2016 My Company. All rights reserved.
 
 <a name="documentr_heading_4"></a>
 
+## RandomWordTag <sup><sup>[top](#documentr_top)</sup></sup>
+
+This tag will output a random word from the passed in list of words, which are 
+delimited by commas (').  The delimiter character can be entered as something else.
+
+
+
+```
+<sutl:randomWord words="hello,there,baby" />
+```
+
+
+
+Which will output one of 
+
+  - `hello`, or
+  - `there`, or
+  - `baby`
+
+Should you wish to use a different delimiter:
+
+
+
+```
+<sutl:randomWord words="hello§there§baby" delimiter="§" />
+```
+
+
+
+Which will again output one of 
+
+  - `hello`, or
+  - `there`, or
+  - `baby`
+
+
+
+<a name="documentr_heading_5"></a>
+
 # Functions <sup><sup>[top](#documentr_top)</sup></sup>
 
 Functions for various things
 
 
 
-<a name="documentr_heading_5"></a>
+<a name="documentr_heading_6"></a>
 
 ## urlEncode <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -134,7 +174,7 @@ some+url
 
 
 
-<a name="documentr_heading_6"></a>
+<a name="documentr_heading_7"></a>
 
 ## urlDecode <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -159,13 +199,13 @@ some url
 
 
 
-<a name="documentr_heading_7"></a>
+<a name="documentr_heading_8"></a>
 
 # Building the Package <sup><sup>[top](#documentr_top)</sup></sup>
 
 
 
-<a name="documentr_heading_8"></a>
+<a name="documentr_heading_9"></a>
 
 ## *NIX/Mac OS X <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -176,7 +216,7 @@ From the root of the project, simply run
 
 
 
-<a name="documentr_heading_9"></a>
+<a name="documentr_heading_10"></a>
 
 ## Windows <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -189,13 +229,13 @@ Note that this may also run tests (if applicable see the Testing notes)
 
 
 
-<a name="documentr_heading_10"></a>
+<a name="documentr_heading_11"></a>
 
 # Running the Tests <sup><sup>[top](#documentr_top)</sup></sup>
 
 
 
-<a name="documentr_heading_11"></a>
+<a name="documentr_heading_12"></a>
 
 ## *NIX/Mac OS X <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -209,7 +249,7 @@ if you do not have gradle installed, try:
 
 
 
-<a name="documentr_heading_12"></a>
+<a name="documentr_heading_13"></a>
 
 ## Windows <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -226,7 +266,7 @@ The `--info` switch will also output logging for the tests
 
 
 
-<a name="documentr_heading_13"></a>
+<a name="documentr_heading_14"></a>
 
 # Artefact Publishing - Github <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -238,17 +278,17 @@ As such, this is not a repository, but a location to download files from.
 
 
 
-<a name="documentr_heading_14"></a>
+<a name="documentr_heading_15"></a>
 
 # Dependency Management Maven <sup><sup>[top](#documentr_top)</sup></sup>
 
 This project publishes artefacts to [Maven Central](https://search.maven.org/)
 
-> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|2.0.0|jar)
+> Note that the latest version can be found [mvn central](http://search.maven.org/#artifactdetails|synapticloop|taglibs|2.1.0|jar)
 
 
 
-<a name="documentr_heading_15"></a>
+<a name="documentr_heading_16"></a>
 
 ## maven setup <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -256,7 +296,7 @@ No setup is required
 
 
 
-<a name="documentr_heading_16"></a>
+<a name="documentr_heading_17"></a>
 
 ## gradle setup <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -274,7 +314,7 @@ repositories {
 
 
 
-<a name="documentr_heading_17"></a>
+<a name="documentr_heading_18"></a>
 
 ## Dependencies - Gradle <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -282,9 +322,9 @@ repositories {
 
 ```
 dependencies {
-	runtime(group: 'synapticloop', name: 'taglibs', version: '2.0.0', ext: 'jar')
+	runtime(group: 'synapticloop', name: 'taglibs', version: '2.1.0', ext: 'jar')
 
-	compile(group: 'synapticloop', name: 'taglibs', version: '2.0.0', ext: 'jar')
+	compile(group: 'synapticloop', name: 'taglibs', version: '2.1.0', ext: 'jar')
 }
 ```
 
@@ -296,9 +336,9 @@ or, more simply for versions of gradle greater than 2.1
 
 ```
 dependencies {
-	runtime 'synapticloop:taglibs:2.0.0'
+	runtime 'synapticloop:taglibs:2.1.0'
 
-	compile 'synapticloop:taglibs:2.0.0'
+	compile 'synapticloop:taglibs:2.1.0'
 }
 ```
 
@@ -306,7 +346,7 @@ dependencies {
 
 
 
-<a name="documentr_heading_18"></a>
+<a name="documentr_heading_19"></a>
 
 ## Dependencies - Maven <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -316,7 +356,7 @@ dependencies {
 <dependency>
 	<groupId>synapticloop</groupId>
 	<artifactId>taglibs</artifactId>
-	<version>2.0.0</version>
+	<version>2.1.0</version>
 	<type>jar</type>
 </dependency>
 ```
@@ -325,7 +365,7 @@ dependencies {
 
 
 
-<a name="documentr_heading_19"></a>
+<a name="documentr_heading_20"></a>
 
 ## Dependencies - Downloads <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -366,7 +406,7 @@ You will also need to download the following dependencies:
 
 
 
-<a name="documentr_heading_24"></a>
+<a name="documentr_heading_25"></a>
 
 # License <sup><sup>[top](#documentr_top)</sup></sup>
 
@@ -375,7 +415,7 @@ You will also need to download the following dependencies:
 ```
 The MIT License (MIT)
 
-Copyright (c) 2016 synapticloop
+Copyright (c) 2017 synapticloop
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

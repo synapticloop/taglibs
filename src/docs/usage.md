@@ -30,6 +30,33 @@ If the start date is empty or the current year, then only the current year is ou
 Copyright (c) 2016 My Company. All rights reserved.
 ```
 
+## RandomWordTag
+
+This tag will output a random word from the passed in list of words, which are 
+delimited by commas (').  The delimiter character can be entered as something else.
+
+```
+<sutl:randomWord words="hello,there,baby" />
+```
+
+Which will output one of 
+
+  - `hello`, or
+  - `there`, or
+  - `baby`
+
+Should you wish to use a different delimiter:
+
+```
+<sutl:randomWord words="hello§there§baby" delimiter="§" />
+```
+
+Which will again output one of 
+
+  - `hello`, or
+  - `there`, or
+  - `baby`
+
 # Functions
 
 Functions for various things
